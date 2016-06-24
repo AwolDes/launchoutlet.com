@@ -6,8 +6,6 @@ from time import gmtime, strftime
 
 from article_polarity import *
 
-import logging as log
-log.basicConfig(filename='../info.log',level=log.WARNING)
 
 def get_bi():
 
@@ -23,10 +21,8 @@ def get_bi():
     data = r.text
     # Turn data into a HTML tree
     soup = BeautifulSoup(data)
-
+    # Call article_polarity.py
     avg_pol = get_ap(soup, 'div', 'river-post', 0, pub = "bi")
-    
-    log.warning("Done: Business Insider " + strftime("%H:%M:%S", gmtime()))
     
     return (avg_pol)
 

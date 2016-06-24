@@ -23,11 +23,9 @@ def get_vent():
     # Turn data into a HTML tree
     soup = BeautifulSoup(data)
     
-    #FOR Venture Beat
+    # Call article_polarity.py
     avg_pol = get_ap(soup, 'article', None, 1, pub="vent")
     
-    log.warning("Done: Venture Beat " + strftime("%H:%M:%S", gmtime()))
-   
     return (avg_pol)
 
 

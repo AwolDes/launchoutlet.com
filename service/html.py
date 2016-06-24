@@ -1,3 +1,4 @@
+# Responsible for generating index.html
 def gen_html(data):
     index = open("../html/index.html", 'r+')
     

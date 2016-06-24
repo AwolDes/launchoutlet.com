@@ -1,3 +1,4 @@
+# Simple bubble algorithm
 def bubble(src):
     for i in range(len(src)):
         for j in range(len(src)-1-i):
